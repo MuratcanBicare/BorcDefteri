@@ -1,4 +1,4 @@
-var apiUrl = "http://borc.mcbonair.site/";
+var apiUrl = "https://borc.mcbonair.site/";
 var pathname = window.location.pathname;
 
 //functions
@@ -29,7 +29,7 @@ function girisKontrol() {
   var accessToken = getAccessToken();
 
   if (!accessToken) {
-    window.location.href = "giris.html";
+    window.location.href = "./giris.html";
     return;
   }
 
@@ -44,7 +44,7 @@ function girisKontrol() {
       $(".gizle").removeClass("gizle");
     },
     error: function () {
-      window.location.href = "giris.html";
+      window.location.href = "./giris.html";
     },
   });
 }
@@ -228,7 +228,7 @@ $("body").on("click", "[data-borc-sil-id]", function (e) {
 
 $("#girisYap").click(function (e) {
   e.preventDefault();
-  window.location.href = "kayit.html";
+  window.location.href = "./kayit.html";
 });
 
 girisKontrol();
