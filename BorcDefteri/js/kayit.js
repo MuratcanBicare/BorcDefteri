@@ -1,4 +1,4 @@
-var apiUrl = "http://borc.mcbonair.site/";
+var apiUrl = "https://borc.mcbonair.site/";
 var pathname = window.location.pathname;
 
 $(document).ready(function () {
@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#txtEmail").val("");
         $("#txtPassword").val("");
         $("#txtConfirmPassword").val("");
-        window.location.href = "giris.html";
+        window.location.href = "./giris.html";
       },
       error: function (xhr,status,error) {
         $("#divErrorText").text("hata");
