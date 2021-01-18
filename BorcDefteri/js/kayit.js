@@ -22,8 +22,14 @@ $(document).ready(function () {
         window.location.href = "./giris.html";
       },
       error: function (xhr,status,error) {
-        $("#divErrorText").text("hata");
-        $("#divError").show("fade");
+        if(xhr.responseJSON.ModelState["model.ConfirmPassword"]){
+          $("#divErrorText").text("Girilen şifreler birbiriyle uyuşmuyor.");
+          $("#divError").show("fade");
+        }
+        else if(xhr.responseJSON.ModelState[""][1]){
+          $("#divErrorText").text("Bu email adresi sisteme kayıtlı.");
+          $("#divError").show("fade");
+        }
       },
     });
   });
