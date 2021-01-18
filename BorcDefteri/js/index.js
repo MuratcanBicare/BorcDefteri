@@ -156,7 +156,7 @@ $("#btnCikisYap").click(function (event) {
   event.preventDefault();
   localStorage.removeItem("login");
   sessionStorage.removeItem("login");
-  window.location.href = "giris.html";
+  window.location.href = "./giris.html";
 });
 
 $("#frmGiris").on("input", function () {
